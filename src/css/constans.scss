@@ -1,0 +1,592 @@
+@import'variables.scss';
+@import'mixins.scss';
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+}
+
+ul,
+ol {
+    padding: 0;
+    list-style-type: none;
+}
+
+// fonts
+.font-99 {
+    font-size: 99px;
+    line-height: 118px;
+    font-weight: 900;
+
+    @include width-991 {
+        font-size: 64px;
+        line-height: 80px;
+    }
+
+    @include width-767 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    @include width-575 {
+        font-size: 54px;
+        line-height: 60px;
+    }
+}
+
+.font-54 {
+    font-size: 54px;
+    line-height: 80px;
+    font-weight: 500;
+
+    @include width-991 {
+        font-size: 45px;
+        line-height: 67px;
+    }
+}
+
+.font-45 {
+    font-size: 45px;
+    line-height: 67px;
+    font-weight: 500;
+
+    @include width-991 {
+        font-size: 36px;
+        line-height: 53px;
+    }
+
+    @include width-575 {
+        line-height: 45px;
+    }
+
+    @include width-399 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+}
+
+.font-36 {
+    font-size: 36px;
+    line-height: 53px;
+    font-weight: 500;
+
+    @include width-991 {
+        font-size: 27px;
+        line-height: 40px;
+    }
+
+    @include width-399 {
+        font-size: 24px;
+    }
+
+    &--lh64 {
+        line-height: 64px;
+
+        @include width-991 {
+            line-height: 48px;
+        }
+
+        @include width-575 {
+            line-height: 42px;
+        }
+    }
+}
+
+.font-27 {
+    font-size: 27px;
+    line-height: 40px;
+    font-weight: 500;
+}
+
+.font-24 {
+    font-size: 24px;
+    line-height: 43px;
+}
+
+.font-22_5 {
+    font-size: 22.5px;
+    line-height: 40px;
+    font-weight: 400;
+}
+
+.font-18 {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 500;
+
+    &--lh29 {
+        line-height: 29px;
+    }
+}
+
+.font-16_2 {
+    font-size: 16.2px;
+    line-height: 26px;
+}
+
+.font-14_4 {
+    font-size: 14.4px;
+    line-height: 30px;
+}
+
+.font-13_5 {
+    font-size: 13.5px;
+    line-height: 20px;
+}
+
+.font-12_6 {
+    font-size: 12.6px;
+    line-height: 26px;
+
+    &--big {
+        display: inline-block;
+        padding-bottom: 6px;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+}
+
+.font-11 {
+    font-size: 11.7px;
+    line-height: 19px;
+}
+
+// font-weight
+.fw-900 {
+    font-weight: 900;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+// background-color
+.bg-purple4 {
+    background-color: $purple4;
+}
+
+.bg-purple3 {
+    background-color: $purple3;
+}
+
+// padding
+.p-top {
+    padding: 57px 0 128px;
+
+    @include width-1299 {
+        padding: 40px 0 100px;
+    }
+
+    @include width-1299 {
+        padding: 40px 0 80px;
+    }
+
+    @include width-767 {
+        padding: 20px 0 40px;
+    }
+}
+
+.p-intro {
+    padding-top: 144px;
+    margin-bottom: -72px;
+
+    @include width-1299 {
+        padding-top: 100px;
+    }
+
+    @include width-991 {
+        padding-top: 80px;
+    }
+    @include width-767 {
+        padding-top: 50px;
+    }
+
+    @include width-575 {
+        margin-bottom: -150px;
+    }
+}
+
+.p-benefits {
+    padding: 140px 0 189px;
+
+    @include width-991 {
+        padding: 100px 0;
+    }
+
+    @include width-575 {
+        padding: 100px 0 80px;
+    }
+}
+
+.p-subscribe {
+    padding: 122px 0 140px;
+
+    @include width-1299 {
+        padding: 100px 0;
+    }
+
+    @include width-575 {
+        padding: 80px 0;
+    }
+
+    @include width-399 {
+        padding: 50px 0;
+    }
+}
+
+.p-services {
+    margin-top: -198px;
+    padding: 320px 0 262px;
+
+    @include width-991 {
+        margin-top: 0;
+        padding: 100px 0 200px;
+    }
+}
+
+.p-footer {
+    padding: 122px 0 126px;
+
+    @include width-1299 {
+        padding: 80px 0;
+    }
+
+    @include width-991 {
+        padding: 50px 0;
+    }
+
+    @include width-575 {
+        padding: 20px 0;
+    }
+}
+
+.p-opinions {
+    padding-bottom: 142px;
+
+    @include width-1299 {
+        padding-bottom: 0;
+    }
+}
+
+// letter-spacing
+.ls-6 {
+    letter-spacing: 6px;
+}
+
+.ls-4 {
+    letter-spacing: 4px;
+}
+
+.ls-2 {
+    letter-spacing: 2px;
+}
+
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+// animations
+
+.bounce {
+    position: relative;
+    animation-duration: 3.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+
+    &:hover {
+        animation-name: bounce;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        left: 0;
+    }
+
+    5% {
+        left: -6px;
+    }
+
+    10% {
+        left: 0;
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        left: 0;
+    }
+
+    5% {
+        left: -6px;
+    }
+
+    10% {
+        left: 0;
+    }
+}
+
+// other
+.form__field-input {
+    &:focus {
+        outline-color: $grey4;
+    }
+}
+
+.o-hidden {
+    overflow: hidden;
+}
+
+.relative {
+    position: relative;
+}
+
+.gradient--text {
+    background-color: $red2;
+    @include linear-gradient($grey5 0%, $red2 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.slick-slider {
+    .slick-slide {
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .draggable {
+        cursor: pointer;
+    }
+}
+
+.pos-vertical {
+    text-transform: uppercase;
+    @include rotate(90deg);
+}
+
+.bg-gradient {
+    @include linear-gradient($purple3 0%, $purple4 100%);
+}
+
+.slick-arrow {
+    cursor: pointer;
+}
+
+.line-bottom {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        opacity: 1;
+        height: 1px;
+        background-color: transparent;
+        @include transition(0.3s);
+    }
+
+    &--red {
+        &::before {
+            width: calc(100% - 6px);
+            background-color: $red2;
+        }
+    }
+
+    &-hover {
+        &::before {
+            left: calc(50% - 1px);
+            transform: translateX(-50%);
+            width: 0;
+            opacity: 0;
+        }
+
+        &:hover {
+            &::before {
+                width: calc(100% - 1px);
+                opacity: 1;
+            }
+        }
+
+        &--grey5 {
+            &::before {
+                background-color: $grey5;
+            }
+        }
+
+        &.line-nav:hover,
+        &.line-nav--active {
+            &::before {
+                width: calc(75% - 2px);
+            }
+        }
+
+        &.line-nav--active {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.btn {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 11.5px 45.1px;
+    border: 1px solid transparent;
+
+    &-red2 {
+        background-color: $red2;
+        color: $grey5;
+
+        &:hover {
+            border-color: $red2;
+            background-color: $grey5;
+            color: $red2;
+        }
+    }
+
+    &-rounded {
+        border-radius: 36px;
+    }
+
+    &-gradient {
+        display: inline-flex;
+        align-items: center;
+        padding: 13px 27px;
+        text-transform: uppercase;
+        font-weight: 800;
+        @include linear-gradient(rgba(255, 255, 255, 0), rgba(242, 242, 242, 0.5));
+        @include transition(0.3s);
+
+        &:hover {
+            background-color: $grey4;
+        }
+
+        &--red2 {
+            p {
+                color: $red2;
+            }
+
+            &:hover {
+                .btn-round--red2 {
+                    border-color: $red1;
+
+                    .svg {
+                        fill: $red2;
+                    }
+                }
+            }
+        }
+    }
+
+    &-round {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 27px;
+        height: 27px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        box-sizing: border-box;
+        @include transition(0.3s);
+
+        &--w48 {
+            width: 48px;
+            height: 48px;
+        }
+
+        &--red2 {
+            border-color: $red2;
+
+            .svg {
+                fill: $red1;
+            }
+        }
+
+        &--red2w {
+            border-color: $red2;
+            background-color: $red2;
+
+            .svg {
+                fill: $white;
+            }
+
+            &:hover {
+                background-color: $white;
+
+                .svg {
+                    fill: $red2;
+                }
+            }
+        }
+
+        &--red2s {
+            border-color: $red2;
+            background-color: transparent;
+
+            .svg {
+                fill: $red2;
+            }
+
+            &:hover {
+                background-color: $red2;
+
+                .svg {
+                    fill: $white;
+                }
+            }
+        }
+
+        &--color2 {
+            background-color: $color2;
+            border: 3px solid $color2;
+        }
+
+        &--color4 {
+            background-color: $color4;
+            border: 1px solid $color5;
+
+            .svg {
+                fill: $grey4;
+            }
+
+            &:hover {
+                background-color: $purple2;
+            }
+        }
+    }
+}

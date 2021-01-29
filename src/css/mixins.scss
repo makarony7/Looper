@@ -1,0 +1,113 @@
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin rotate($transition) {
+    -webkit-transform: rotate($transition);
+    -moz-transform: rotate($transition);
+    -o-transform: rotate($transition);
+    transform: rotate($transition);
+}
+
+@mixin box-shadow($horiz, $vert, $blur, $spread, $color) {
+    -webkit-box-shadow: $horiz $vert $blur $spread $color;
+    -moz-box-shadow: $horiz $vert $blur $spread $color;
+    -o-transition: $horiz $vert $blur $spread $color;
+    box-shadow: $horiz $vert $blur $spread $color;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+    background: nth(nth($color-stops, 1), 1);
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background: linear-gradient($direction, $color-stops);
+}
+
+// max
+
+@mixin width-992 {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin width-1300 {
+    @media (min-width: 1300px) {
+        @content;
+    }
+}
+
+@mixin width-1440 {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin width-1500 {
+    @media (min-width: 1500px) {
+        @content;
+    }
+}
+
+@mixin width-1600 {
+    @media (min-width: 1600px) {
+        @content;
+    }
+}
+
+@mixin width-1700 {
+    @media (min-width: 1700px) {
+        @content;
+    }
+}
+
+// max
+@mixin width-1299 {
+    @media (max-width: 1299px) {
+        @content;
+    }
+}
+
+@mixin width-1199 {
+    @media (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin width-1099 {
+    @media (max-width: 1099px) {
+        @content;
+    }
+}
+
+@mixin width-991 {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin width-767 {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin width-575 {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+
+@mixin width-489 {
+    @media (max-width: 489px) {
+        @content;
+    }
+}
+
+@mixin width-399 {
+    @media (max-width: 399px) {
+        @content;
+    }
+}
